@@ -18,9 +18,9 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
+    output = prediction
 
-    return render_template('index.html', prediction_text='Chances of taking Health Insurence is $ {}'.format(output))
+    return render_template('index.html', prediction_text='The premium of the personal for health insurance is $ {}'.format(output))
 
 
 if __name__ == "__main__":
