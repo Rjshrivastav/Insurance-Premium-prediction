@@ -18,11 +18,11 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="age" placeholder="age" required="required" />
-        <input type="text" name="sex" placeholder="sex" required="required" />
+        <input type="text" name="sex(0:Female,1:Male)" placeholder="sex(0:Female,1:Male)" required="required" />
 	<input type="text" name="bmi" placeholder="bmi" required="required" />
 	<input type="text" name="children" placeholder="children" required="required" />
-	<input type="text" name="smoker" placeholder="smoker" required="required" />
-	<input type="text" name="region" placeholder="region" required="required" />
+	<input type="text" name="smoker(1:Yes,0:No)" placeholder="smoker(1:Yes,0:No)" required="required" />
+	<input type="text" name="region(0:northeast1:northwest,2:southeast,3:southwest)" placeholder="region(0:northeast1:northwest,2:southeast,3:southwest)" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
