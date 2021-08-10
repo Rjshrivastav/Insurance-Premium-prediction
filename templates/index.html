@@ -18,13 +18,32 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="age" placeholder="age" required="required" />
-        <input type="text" name="sex(0:Female,1:Male)" placeholder="sex(0:Female,1:Male)" required="required" />
-	<input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
+        
+	<label for="gender">Choose gender:</label>
+
+        <select name="gender" id="gender">
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+        </select>
+	    
 	<input type="text" name="bmi" placeholder="bmi" required="required" />
 	<input type="text" name="children" placeholder="children" required="required" />
-	<input type="text" name="smoker(1:Yes,0:No)" placeholder="smoker(1:Yes,0:No)" required="required" />
-	<input type="text" name="region(0:northeast1:northwest,2:southeast,3:southwest)" placeholder="region(0:northeast1:northwest,2:southeast,3:southwest)" required="required" />
+	    
+	<label for="smoker">Do you smoke?</label>
+
+        <select name="smoker" id="smoker">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+	    
+	<label for="region">Choose region:</label>
+
+        <select name="region" id="region">
+        <option value="0">northeast</option>
+        <option value="1">northwest</option>
+        <option value="2">southeast</option>
+        <option value="3">southwest</option>
+        </select>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
