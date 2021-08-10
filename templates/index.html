@@ -19,6 +19,8 @@
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="age" placeholder="age" required="required" />
         <input type="text" name="sex(0:Female,1:Male)" placeholder="sex(0:Female,1:Male)" required="required" />
+	<input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
 	<input type="text" name="bmi" placeholder="bmi" required="required" />
 	<input type="text" name="children" placeholder="children" required="required" />
 	<input type="text" name="smoker(1:Yes,0:No)" placeholder="smoker(1:Yes,0:No)" required="required" />
