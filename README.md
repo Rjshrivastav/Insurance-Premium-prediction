@@ -15,5 +15,3 @@ For predictive analytics: scikit-learn, LightGBM
 
 ## Task
 build a solution that should able to predict the premium of the personal for health insurance
-
-link: https://insurance-premium-pred.herokuapp.com/
